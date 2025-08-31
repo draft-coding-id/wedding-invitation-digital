@@ -33,15 +33,15 @@ const Cover = ({ isOpen, guestName, onOpen }) => {
         <motion.h1
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1 }}
+          transition={{ duration: 1, delay: 0.7 }}
           className="text-6xl/tight md:text-8xl/tight font-corinthia mt-8 font-semibold text-start w-full ms-10"
         >
           Ivandrian
         </motion.h1>
         <motion.h1
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1 }}
+          initial={{ opacity: 0, scale: 0.8, rotate: 90 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 1, delay: 0.9 }}
           className="text-6xl md:text-8xl font-corinthia font-semibold"
         >
           &
@@ -49,26 +49,26 @@ const Cover = ({ isOpen, guestName, onOpen }) => {
         <motion.h1
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1 }}
+          transition={{ duration: 1, delay: 1.1 }}
           className="text-6xl/tight md:text-8xl/tight font-corinthia mb-8 font-semibold text-end w-full me-10"
         >
-          Megiana
+          Meigiana
         </motion.h1>
       </div>
 
-      <div>
+      <div className='flex flex-col items-center'>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="text-lg text-light-cream mb-2"
+          transition={{ duration: 1, delay: 1.4 }}
+          className="text-xl font-bold mb-2"
         >
-          
+          Rabu, 10 Desember 2025
         </motion.p>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
+          transition={{ duration: 1, delay: 1.6 }}
           className="text-lg text-light-cream mb-2"
         >
           Dear,
@@ -86,7 +86,7 @@ const Cover = ({ isOpen, guestName, onOpen }) => {
         <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2.2 }}
+          transition={{ duration: 1, delay: 2 }}
           onClick={onOpen}
           className="bg-white text-dark-green font-bold py-2 px-6 rounded-full hover:bg-opacity-80 transition-all flex items-center"
         >
@@ -98,7 +98,7 @@ const Cover = ({ isOpen, guestName, onOpen }) => {
       <motion.img 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 2.4 }}
+        transition={{ duration: 6, delay: 0 }}
         src={CoverCornerBottomLeft} 
         layout="fill" 
         objectFit="cover" 
