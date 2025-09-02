@@ -86,7 +86,7 @@ const Couple = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8 }}
-            className='w-11/12 lg:w-5/12 rounded-tl-[11rem] overflow-hidden border-y-4 border-l-4 border-white h-[80vh] relative text-white'
+            className='w-11/12 lg:w-5/12 overflow-hidden border-y-4 border-l-4 border-white h-[80vh] relative text-white'
             style={{ backgroundImage: `url(${groom})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
           >
             <motion.div 
@@ -157,7 +157,7 @@ const Couple = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8 }}
-            className='w-11/12 lg:w-5/12 rounded-tr-[11rem] overflow-hidden border-y-4 border-r-4 border-white h-[80vh] relative text-white'
+            className='w-11/12 lg:w-5/12 overflow-hidden border-y-4 border-r-4 border-white h-[80vh] relative text-white'
             style={{ backgroundImage: `url(${bride})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
           >
             <motion.div 
