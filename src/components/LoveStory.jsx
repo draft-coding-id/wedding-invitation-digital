@@ -43,8 +43,8 @@ const LoveStory = () => {
 						className="bg-white/10 backdrop-blur-md p-8 rounded-lg text-start w-full border border-white/20 shadow-lg"
 					>
 						<h3 className="text-2xl font-bold mb-2">{story.title}</h3>
-						<p className="text-primary font-semibold mb-2">{story.date}</p>
-						<p className="text-light-cream text-md">{story.desc}</p>
+						<p className="text-gold font-semibold mb-2 text-lg">{story.date}</p>
+						<p className="text-light-cream">{story.desc}</p>
 					</motion.div>
 				))}
 			</div>

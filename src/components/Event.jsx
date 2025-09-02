@@ -17,7 +17,7 @@ const EventCard = ({ title, date, time, venue, address, mapLink }) => {
       <p className="text-lg">{date}</p>
       <p className="text-md mb-4">{time}</p>
       <p className="font-bold text-lg">{venue}</p>
-      <p className="text-sm mb-6">{address}</p>
+      <p className="text-xs mb-6 font-inter">{address}</p>
       <a href={mapLink} target="_blank" rel="noopener noreferrer" className="bg-gold text-dark-green font-bold py-2 px-4 rounded-full inline-flex items-center gap-2 hover:bg-opacity-80 transition-all">
         <FaMapMarkerAlt />
         <span>View Map</span>

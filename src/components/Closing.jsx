@@ -10,9 +10,9 @@ const Closing = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: false }}
         whileInView={{ opacity: 1, y: 0 }}
-        className='text-lg'
+        className='text-lg max-w-xl'
       >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur natus nostrum accusantium officia sunt amet sapiente eos aspernatur eveniet atque!
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus odit obcaecati autem nemo eligendi esse ratione assumenda debitis, quo voluptatibus dolore! Labore doloribus provident pariatur.
       </motion.p>
       <motion.div 
         className='relative px-8 flex flex-col justify-center items-center'

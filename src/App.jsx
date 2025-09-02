@@ -69,7 +69,7 @@ function App() {
         <div
           className="relative z-0"
         >
-          <div className='absolute inset-0 bg-[#555555] opacity-60'></div>
+          <div className='absolute inset-0 bg-[#3e3e3e] opacity-70'></div>
           <motion.main
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -41,7 +41,7 @@ const Wishes = ({ wishes, addWish }) => {
             id="name" 
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full border border-white-gold rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-gold"
+            className="w-full border border-white-gold rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-gold text-white"
             required
           />
         </div>
@@ -52,7 +52,7 @@ const Wishes = ({ wishes, addWish }) => {
             rows="4"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full border border-white-gold rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-gold"
+            className="w-full border border-white-gold rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-gold text-white"
             required
           ></textarea>
         </div>
@@ -73,8 +73,8 @@ const Wishes = ({ wishes, addWish }) => {
               exit={{ opacity: 0 }}
               className="bg-white/10 backdrop-blur-sm p-4 rounded-lg mb-4 border border-white/20"
             >
-              <p className="font-bold text-gold">{wish.name}</p>
-              <p className="text-light-cream/90">{wish.message}</p>
+              <p className="font-bold text-white">{wish.name}</p>
+              <p className="text-light-cream/90 text-white-gold">{wish.message}</p>
             </motion.div>
           ))}
         </AnimatePresence>
