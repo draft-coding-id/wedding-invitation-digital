@@ -11,10 +11,14 @@ import Wishes from './components/Wishes';
 import LoveStory from './components/LoveStory';
 import Closing from './components/Closing';
 import MusicController from './components/MusicController';
+import Rsvp from './components/rsvp';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [wishes, setWishes] = useState([]);
+
+  const [rsvps, setRsvps] = useState([]); 
+
   const audioRef = useRef(null);
   const [guestName, setGuestName] = useState('Guest');
   const [isPlaying, setIsPlaying] = useState(false);
@@ -57,6 +61,10 @@ function App() {
     setWishes([newWish, ...wishes]);
   };
 
+  const addRsvp = (newRsvp) => {
+    setRsvps([newRsvp, ...rsvps]);
+  };
+
   return (
     <div className="font-cormorant">
       <audio ref={audioRef} src={song} loop />
@@ -80,6 +88,7 @@ function App() {
             <Event />
             <DressCode />
             <Wishes wishes={wishes} addWish={addWish} />
+            <Rsvp rsvps={rsvps} addRsvp={addRsvp} guestName={guestName} />
             <Gallery />
             <LoveStory />
             <Closing />

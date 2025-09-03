@@ -86,7 +86,7 @@ const Couple = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8 }}
-            className='w-11/12 lg:w-5/12 overflow-hidden border-y-4 border-l-4 border-white h-[80vh] relative text-white'
+            className='w-11/12 lg:w-5/12 overflow-hidden h-[80vh] relative text-white'
             style={{ backgroundImage: `url(${groom})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
           >
             <motion.div 
@@ -135,7 +135,7 @@ const Couple = () => {
                 whileHover={{ scale: 1.1 }}
                 viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: 1.2 }}
-                href="" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-gold hover:text-light-cream"
+                href="https://www.instagram.com/nafiswatsiq" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-gold hover:text-light-cream"
               >
                 <FaInstagram size={28} />
               </motion.a>
@@ -157,7 +157,7 @@ const Couple = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8 }}
-            className='w-11/12 lg:w-5/12 overflow-hidden border-y-4 border-r-4 border-white h-[80vh] relative text-white'
+            className='w-11/12 lg:w-5/12 overflow-hidden h-[80vh] relative text-white'
             style={{ backgroundImage: `url(${bride})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
           >
             <motion.div 
@@ -206,7 +206,7 @@ const Couple = () => {
                 whileHover={{ scale: 1.1 }}
                 viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: 1.2 }}
-                href="" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-gold hover:text-light-cream"
+                href="https://www.instagram.com/nafiswatsiq" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-gold hover:text-light-cream"
               >
                 <FaInstagram size={28} />
               </motion.a>

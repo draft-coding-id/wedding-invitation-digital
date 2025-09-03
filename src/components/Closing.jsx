@@ -21,7 +21,7 @@ const Closing = () => {
         transition={{ duration: 0.8 }}
         viewport={{ once: false }}
       >
-        <img src={ClosingImage} alt="Closing" className='border-4 border-white-gold lg:w-4/12 w-full'/>
+        <img src={ClosingImage} alt="Closing" className=' lg:w-4/12 w-full'/>
         <p className='text-5xl font-corinthia mt-6'>
           Ivandrian & Meigiana
         </p>
