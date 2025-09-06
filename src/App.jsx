@@ -8,10 +8,10 @@ import Event from './components/Event';
 import DressCode from './components/DressCode';
 import Gallery from './components/Gallery';
 import Wishes from './components/Wishes';
-import LoveStory from './components/LoveStory';
 import Closing from './components/Closing';
 import MusicController from './components/MusicController';
 import Rsvp from './components/rsvp';
+import Detail from './components/Detail';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,10 +87,10 @@ function App() {
             <Couple />
             <Event />
             <DressCode />
-            <Wishes wishes={wishes} addWish={addWish} />
+            <Wishes wishes={wishes} addWish={addWish} guestName={guestName} />
             <Rsvp rsvps={rsvps} addRsvp={addRsvp} guestName={guestName} />
+            <Detail />
             <Gallery />
-            <LoveStory />
             <Closing />
           </motion.main>
 

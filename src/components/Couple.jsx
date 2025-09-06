@@ -135,7 +135,7 @@ const Couple = () => {
                 whileHover={{ scale: 1.1 }}
                 viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: 1.2 }}
-                href="https://www.instagram.com/nafiswatsiq" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-gold hover:text-light-cream"
+                href="https://www.instagram.com/ivandriangg" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-gold hover:text-light-cream"
               >
                 <FaInstagram size={28} />
               </motion.a>
@@ -206,7 +206,7 @@ const Couple = () => {
                 whileHover={{ scale: 1.1 }}
                 viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: 1.2 }}
-                href="https://www.instagram.com/nafiswatsiq" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-gold hover:text-light-cream"
+                href="https://www.instagram.com/meigianasmdh" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-gold hover:text-light-cream"
               >
                 <FaInstagram size={28} />
               </motion.a>

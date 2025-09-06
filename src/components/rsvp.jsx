@@ -5,7 +5,6 @@ import { FaUserCheck, FaUserTimes } from 'react-icons/fa';
 // Terima guestName dari App.jsx untuk pre-fill form
 const Rsvp = ({ rsvps, addRsvp, guestName }) => {
   const [name, setName] = useState('');
-  const [message, setMessage] = useState('');
   const [attendance, setAttendance] = useState('');
   const [guestCount, setGuestCount] = useState(1);
 
@@ -18,10 +17,9 @@ const Rsvp = ({ rsvps, addRsvp, guestName }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name && message && attendance) {
+    if (name && attendance) {
       const newRsvp = {
         name,
-        message,
         attendance,
         guestCount: attendance === 'Hadir' ? guestCount : 0,
       };
@@ -29,7 +27,6 @@ const Rsvp = ({ rsvps, addRsvp, guestName }) => {
 
       // Reset form setelah submit
       setName('');
-      setMessage('');
       setAttendance('');
       setGuestCount(1);
     } else {
@@ -46,7 +43,7 @@ const Rsvp = ({ rsvps, addRsvp, guestName }) => {
         transition={{ duration: 0.8 }}
         className="text-5xl font-serif text-center text-white-gold mb-8"
       >
-        RSVP & Wishes
+        RSVP
       </motion.h2>
 
       <motion.form
@@ -106,28 +103,17 @@ const Rsvp = ({ rsvps, addRsvp, guestName }) => {
             >
               <option value={1} style={{ background: '#bfa06f', color: 'white' }}>1 Orang</option>
               <option value={2} style={{ background: '#bfa06f', color: 'white' }}>2 Orang</option>
+              <option value={2} style={{ background: '#bfa06f', color: 'white' }}>3 Orang</option>
             </select>
           </motion.div>
         )}
-
-        <div className="mb-4">
-          <label htmlFor="message" className="block mb-2 text-white-gold">Ucapan & Doa</label>
-          <textarea 
-            id="message" 
-            rows="4"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className="w-full text-white border border-white-gold rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-gold placeholder-gray-300"
-            required
-          ></textarea>
-        </div>
         <button type="submit" className="w-full bg-gold text-dark-green font-bold py-2 px-4 rounded-full hover:bg-opacity-80 transition-all">
           Kirim Konfirmasi
         </button>
       </motion.form>
 
       {/* Menampilkan data RSVP yang sudah masuk */}
-      <div className="w-full max-w-lg mt-12">
+      {/* <div className="w-full max-w-lg mt-12">
         <h3 className="text-3xl font-serif text-center text-gold mb-6">Daftar Ucapan</h3>
         <AnimatePresence>
           {rsvps.map((rsvp, index) => (
@@ -155,7 +141,7 @@ const Rsvp = ({ rsvps, addRsvp, guestName }) => {
             </motion.div>
           ))}
         </AnimatePresence>
-      </div>
+      </div> */}
     </section>
   );
 };

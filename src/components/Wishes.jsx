@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Wishes = ({ wishes, addWish }) => {
+const Wishes = ({ wishes, addWish, guestName }) => {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    if (guestName && guestName !== 'Guest') {
+      setName(guestName);
+    }
+  }, [guestName]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

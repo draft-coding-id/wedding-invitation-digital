@@ -12,7 +12,7 @@ const Closing = () => {
         whileInView={{ opacity: 1, y: 0 }}
         className='text-lg max-w-xl'
       >
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus odit obcaecati autem nemo eligendi esse ratione assumenda debitis, quo voluptatibus dolore! Labore doloribus provident pariatur.
+          "Kebahagiaan duniawi terbesar yang dapat dialami manusia adalah perpaduan dari pernikahan yang mengikat dua hati yang saling mencintai menjadi satu."
       </motion.p>
       <motion.div 
         className='relative px-8 flex flex-col justify-center items-center'
