@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaUserCheck, FaUserTimes } from 'react-icons/fa';
+import { supabase } from '../supabaseClient';
 
 // Terima guestName dari App.jsx untuk pre-fill form
 const Rsvp = ({ rsvps, addRsvp, guestName }) => {
@@ -15,22 +15,30 @@ const Rsvp = ({ rsvps, addRsvp, guestName }) => {
     }
   }, [guestName]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (name && attendance) {
-      const newRsvp = {
+      const rsvpData = {
         name,
         attendance,
-        guestCount: attendance === 'Hadir' ? guestCount : 0,
+        guestcount: attendance === 'Hadir' ? guestCount : 0,
       };
-      addRsvp(newRsvp);
+      
+      // Kirim data langsung ke Supabase
+      const { error } = await supabase.from('rsvps').insert(rsvpData);
 
-      // Reset form setelah submit
-      setName('');
-      setAttendance('');
-      setGuestCount(1);
+      if (error) {
+        alert('Gagal mengirim RSVP. Coba lagi.');
+        console.error(error);
+      } else {
+        alert("Terima kasih atas konfirmasinya!");
+        addRsvp(rsvpData); // Update UI langsung
+        setName('');
+        setAttendance('');
+        setGuestCount(1);
+      }
     } else {
-      alert("Harap isi semua kolom yang wajib diisi.");
+      alert("Harap isi nama dan konfirmasi kehadiran.");
     }
   };
 
@@ -103,7 +111,7 @@ const Rsvp = ({ rsvps, addRsvp, guestName }) => {
             >
               <option value={1} style={{ background: '#bfa06f', color: 'white' }}>1 Orang</option>
               <option value={2} style={{ background: '#bfa06f', color: 'white' }}>2 Orang</option>
-              <option value={2} style={{ background: '#bfa06f', color: 'white' }}>3 Orang</option>
+              <option value={3} style={{ background: '#bfa06f', color: 'white' }}>3 Orang</option>
             </select>
           </motion.div>
         )}
@@ -111,37 +119,6 @@ const Rsvp = ({ rsvps, addRsvp, guestName }) => {
           Kirim Konfirmasi
         </button>
       </motion.form>
-
-      {/* Menampilkan data RSVP yang sudah masuk */}
-      {/* <div className="w-full max-w-lg mt-12">
-        <h3 className="text-3xl font-serif text-center text-gold mb-6">Daftar Ucapan</h3>
-        <AnimatePresence>
-          {rsvps.map((rsvp, index) => (
-            <motion.div
-              key={index}
-              layout
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              className="bg-white/10 backdrop-blur-sm p-4 rounded-lg mb-4 border border-white/20"
-            >
-              <div className="flex justify-between items-start">
-                <p className="font-bold text-gold">{rsvp.name}</p>
-                {rsvp.attendance === 'Hadir' ? (
-                  <span className="text-xs font-semibold text-green-300 bg-green-800/50 px-2 py-1 rounded-full flex items-center gap-1">
-                    <FaUserCheck /> Hadir ({rsvp.guestCount} orang)
-                  </span>
-                ) : (
-                  <span className="text-xs font-semibold text-red-300 bg-red-800/50 px-2 py-1 rounded-full flex items-center gap-1">
-                    <FaUserTimes /> Tidak Hadir
-                  </span>
-                )}
-              </div>
-              <p className="text-light-cream/90 mt-2">{rsvp.message}</p>
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </div> */}
     </section>
   );
 };

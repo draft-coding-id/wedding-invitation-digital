@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { supabase } from '../supabaseClient';
 
 const Wishes = ({ wishes, addWish, guestName }) => {
   const [name, setName] = useState('');
@@ -11,12 +12,22 @@ const Wishes = ({ wishes, addWish, guestName }) => {
     }
   }, [guestName]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (name && message) {
-      addWish({ name, message });
-      setName('');
-      setMessage('');
+      const wishData = { name, message };
+
+      // Kirim data langsung ke Supabase
+      const { error } = await supabase.from('wishes').insert(wishData);
+
+      if (error) {
+        alert('Gagal mengirim ucapan. Coba lagi.');
+        console.error(error);
+      } else {
+        addWish(wishData); // Update UI langsung
+        setName('');
+        setMessage('');
+      }
     }
   };
 
