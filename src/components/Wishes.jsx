@@ -78,7 +78,7 @@ const Wishes = ({ wishes, addWish, guestName }) => {
         </button>
       </motion.form>
 
-      <div className="w-full max-w-lg mt-12">
+      <div className="w-full max-w-lg mt-12 max-h-96 overflow-y-auto">
         <h3 className="text-3xl  text-center text-gold mb-6">Messages</h3>
         <AnimatePresence>
           {wishes.map((wish, index) => (

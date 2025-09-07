@@ -151,8 +151,8 @@ function App() {
                   <Couple />
                   <Event />
                   <DressCode />
-                  <Wishes wishes={wishes} addWish={addWish} guestName={guestName} />
                   <Rsvp rsvps={rsvps} addRsvp={addRsvp} guestName={guestName} />
+                  <Wishes wishes={wishes} addWish={addWish} guestName={guestName} />
                   <Detail />
                   <Gallery />
                   <Closing />
