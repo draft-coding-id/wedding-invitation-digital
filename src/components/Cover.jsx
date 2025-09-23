@@ -9,8 +9,8 @@ import CoverCornerTopRight from '../assets/top-right.png';
 const Cover = ({ isOpen, guestName, onOpen }) => {
   return (
     <motion.div
-      style={{ width: '100vw', height: '100vh', backgroundImage: `url(${CoverImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-      className="fixed inset-0 flex flex-col items-center justify-between text-center z-50 p-4 text-white py-28"
+      style={{ width: '100vw', height: '100vh', backgroundImage: `url(${CoverImage})`, backgroundSize: 'cover', backgroundPosition: 'center 30%' }}
+      className="fixed inset-0 flex flex-col items-center justify-between text-center z-50 p-4 text-white py-28 md:bg-top lg:bg-top"
       initial={{ y: 0 }}
       exit={{ y: '-100vh' }} // Animasi keluar yang simpel
       transition={{ duration: 1.2, ease: 'easeInOut' }}
@@ -29,7 +29,7 @@ const Cover = ({ isOpen, guestName, onOpen }) => {
         The Wedding Of
       </motion.h2>
       
-      <div className='w-full'>
+      <div className='w-full mt-18'>
         <motion.h1
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}

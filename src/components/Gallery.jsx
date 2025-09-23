@@ -1,13 +1,23 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import galleryImage1a from '../assets/gallery/1a.jpg';
+import galleryImage1b from '../assets/gallery/1b.jpg';
+import galleryImage2a from '../assets/gallery/2a.jpg';
+import galleryImage2b from '../assets/gallery/2b.jpg';
+import galleryImage3a from '../assets/gallery/3a.jpg';
+import galleryImage3b from '../assets/gallery/3b.jpg';
+import galleryImage4a from '../assets/gallery/4a.jpg';
+import galleryImage4b from '../assets/gallery/4b.jpg';
 
 const photos = [
-  "https://wp.envelope.id/wp-content/uploads/2024/03/Lux1-48-FILEminimizer.jpg",
-  "https://wp.envelope.id/wp-content/uploads/2024/03/Lux1-30-FILEminimizer.jpg",
-  "https://wp.envelope.id/wp-content/uploads/2024/03/Lux1-43-FILEminimizer.jpg",
-  "https://wp.envelope.id/wp-content/uploads/2024/03/Lux1-18-FILEminimizer.jpg",
-  "https://wp.envelope.id/wp-content/uploads/2024/03/Lux1-48-FILEminimizer.jpg",
-  "https://wp.envelope.id/wp-content/uploads/2024/03/Lux1-30-FILEminimizer.jpg",
+  galleryImage1a,
+  galleryImage1b,
+  galleryImage2a,
+  galleryImage2b,
+  galleryImage3a,
+  galleryImage3b,
+  galleryImage4a,
+  galleryImage4b,
 ];
 
 const Gallery = () => {
@@ -47,7 +57,7 @@ const Gallery = () => {
       >
         Our Moments
       </motion.h2>
-      <div className="columns-2 md:columns-3 gap-4 max-w-6xl mx-auto">
+      <div className="columns-2 md:columns-4 gap-4 max-w-6xl mx-auto">
         {photos.map((src, index) => (
           <motion.div 
             key={index} 
@@ -123,13 +133,13 @@ const Gallery = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3 }}
-              className="relative max-w-5xl max-h-full"
+              className="relative max-w-lg max-h-full lg:h-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <img
                 src={selectedImage.src}
                 alt={`Gallery image ${selectedImage.index + 1}`}
-                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                className="max-w-full max-h-full lg:h-auto object-contain rounded-lg shadow-2xl"
               />
               
               {/* Image Counter */}

@@ -33,7 +33,7 @@ const Detail = () => {
 			>
 				Details
 			</motion.h2>
-			<div className="flex flex-col md:flex-row gap-8 justify-center items-center w-full max-w-5xl">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center items-center w-full max-w-5xl">
 				{stories.map((story, idx) => (
 					<motion.div
 						key={story.title}

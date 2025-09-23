@@ -9,7 +9,7 @@ const Couple = () => {
   return (
     <>
       <section 
-        style={{ width: '100vw', height: '100vh', backgroundImage: `url(${CoverImage2})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        style={{ width: '100vw', height: '100vh', backgroundImage: `url(${CoverImage2})`, backgroundSize: 'cover', backgroundPosition: 'center 16%' }}
         className='h-screen relative flex flex-col justify-center items-center text-center px-4'
       >
         <div className='absolute inset-0 bg-[#555555] opacity-60'></div>
