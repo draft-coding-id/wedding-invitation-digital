@@ -14,6 +14,10 @@ import Closing from './components/Closing';
 import MusicController from './components/MusicController';
 import Rsvp from './components/rsvp';
 import Detail from './components/Detail';
+import Preloader from './components/Preloader';
+
+// Import hook untuk preload images
+import usePreloadImages from './hooks/usePreloadImages';
 
 // Import komponen dan data untuk fitur admin
 import Login from './components/Login';
@@ -30,6 +34,9 @@ function App() {
 
   const [view, setView] = useState('invitation');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // Hook untuk preload images
+  const { progress, isComplete } = usePreloadImages();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -124,6 +131,11 @@ function App() {
   };
 
   const renderView = () => {
+    // Show preloader if images are not complete and we're on invitation view
+    if (!isComplete && view === 'invitation') {
+      return <Preloader progress={progress} isComplete={isComplete} />;
+    }
+
     switch (view) {
       case 'login':
         return <Login onLogin={handleLogin} />;
