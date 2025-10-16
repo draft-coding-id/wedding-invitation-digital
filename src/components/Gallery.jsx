@@ -57,7 +57,7 @@ const Gallery = () => {
       >
         Our Moments
       </motion.h2>
-      <div className="columns-2 md:columns-4 gap-4 max-w-6xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
         {photos.map((src, index) => (
           <motion.div 
             key={index} 

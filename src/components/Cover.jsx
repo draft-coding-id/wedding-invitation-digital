@@ -29,7 +29,7 @@ const Cover = ({ isOpen, guestName, onOpen }) => {
         The Wedding Of
       </motion.h2>
       
-      <div className='w-full mt-18'>
+      <div className='w-full mt-40'>
         <motion.h1
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -95,7 +95,7 @@ const Cover = ({ isOpen, guestName, onOpen }) => {
         </motion.button>
       </div>
 
-      <motion.img 
+      {/* <motion.img 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 6, delay: 0 }}
@@ -103,7 +103,7 @@ const Cover = ({ isOpen, guestName, onOpen }) => {
         layout="fill" 
         objectFit="cover" 
         className='bottom-0 absolute left-0 -z-10 lg:w-2/5' 
-      />
+      /> */}
     </motion.div>
   );
 };

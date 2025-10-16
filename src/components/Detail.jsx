@@ -17,7 +17,7 @@ const stories = [
 	},
 	{
 		title: 'Schedule Note',
-		desc: 'While we have planned a detailed schedule for our special day, we understand that unforeseen circumstances may arise. Should you need to adjust your arrival or departure plans, kindly inform our contact person, [Nadya] , at +62 821-5829-8599 so we can accommodate your needs accordingly.',
+		desc: 'While we have planned a detailed schedule for our special day, we understand that unforeseen circumstances may arise. Should you need to adjust your arrival or departure plans, kindly inform our contact person, [Rika] , at +62 821-5829-8599 so we can accommodate your needs accordingly.',
 	}
 ];
 
