@@ -25,7 +25,7 @@ const Couple = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.7 }}
               viewport={{ once: false }}
-              className="text-6xl/tight md:text-8xl/tight font-corinthia mt-8 font-semibold w-full"
+              className="text-5xl/tight md:text-8xl/tight font-corinthia mt-8 font-semibold w-full"
             >
               Ivandrian
             </motion.h1>
@@ -33,7 +33,7 @@ const Couple = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.9 }}
-              className="text-6xl md:text-8xl font-corinthia font-semibold"
+              className="text-5xl md:text-8xl font-corinthia font-semibold"
             >
               &
             </motion.h1>
@@ -41,7 +41,7 @@ const Couple = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 1.1 }}
-              className="text-6xl/tight md:text-8xl/tight font-corinthia mb-8 font-semibold w-full"
+              className="text-5xl/tight md:text-8xl/tight font-corinthia mb-6 font-semibold w-full"
             >
               Meigiana
             </motion.h1>
