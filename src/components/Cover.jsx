@@ -29,12 +29,12 @@ const Cover = ({ isOpen, guestName, onOpen }) => {
         The Wedding Of
       </motion.h2>
       
-      <div className='w-full mt-40'>
+      <div className='w-full mt-28'>
         <motion.h1
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.7 }}
-          className="text-6xl/tight md:text-8xl/tight font-corinthia mt-8 font-semibold text-start w-full ms-10"
+          className="text-5xl/tight md:text-8xl/tight font-corinthia mt-8 font-semibold text-start w-full ms-10"
         >
           Ivandrian
         </motion.h1>
@@ -42,7 +42,7 @@ const Cover = ({ isOpen, guestName, onOpen }) => {
           initial={{ opacity: 0, scale: 0.8, rotate: 90 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
-          className="text-6xl md:text-8xl font-corinthia font-semibold"
+          className="text-5xl md:text-8xl font-corinthia font-semibold"
         >
           &
         </motion.h1>
@@ -50,7 +50,7 @@ const Cover = ({ isOpen, guestName, onOpen }) => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 1.1 }}
-          className="text-6xl/tight md:text-8xl/tight font-corinthia mb-8 font-semibold text-end w-full me-10"
+          className="text-5xl/tight md:text-8xl/tight font-corinthia mb-6 font-semibold text-end w-full me-10"
         >
           Meigiana
         </motion.h1>
@@ -61,7 +61,7 @@ const Cover = ({ isOpen, guestName, onOpen }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.4 }}
-          className="text-xl font-bold mb-2"
+          className="text-xl font-bold mb-1"
         >
           Rabu, 10 Desember 2025
         </motion.p>
@@ -69,7 +69,7 @@ const Cover = ({ isOpen, guestName, onOpen }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.6 }}
-          className="text-lg text-light-cream mb-2"
+          className="text-lg text-light-cream mb-1"
         >
           Dear,
         </motion.p>
@@ -78,7 +78,7 @@ const Cover = ({ isOpen, guestName, onOpen }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.8 }}
-          className="text-2xl font-bold text-light-cream mb-8"
+          className="text-2xl font-bold text-light-cream mb-6"
         >
           {guestName}
         </motion.p>
