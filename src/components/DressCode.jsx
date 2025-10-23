@@ -20,13 +20,23 @@ const DressCode = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="max-w-xl mx-auto mb-8 text-white"
       >
-        Kami berharap tamu undangan berkenan mengenakan warna-warna berikut ini di hari istimewa kami.
+        "Earthy Coastal"<br />
+        Please note : As our event is outdoors on the beach, we suggest choosing comfortable shoes and attire
       </motion.p>
-      <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale justify-center">
-        <motion.div whileHover={{ scale: 1.1 }} className="w-16 h-16 rounded-full bg-primary border-2 border-primary"></motion.div>
-        <motion.div whileHover={{ scale: 1.1 }} className="w-16 h-16 rounded-full bg-white border-2 border-primary"></motion.div>
-        <motion.div whileHover={{ scale: 1.1 }} className="w-16 h-16 rounded-full bg-gray-400 border-2 border-primary"></motion.div>
+      
+      <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale justify-center mb-4">
+        <motion.div whileHover={{ scale: 1.1 }} className="w-16 h-16 rounded-full bg-[#5b632a]"></motion.div>
+        <motion.div whileHover={{ scale: 1.1 }} className="w-16 h-16 rounded-full bg-[#8e9164]"></motion.div>
+        <motion.div whileHover={{ scale: 1.1 }} className="w-16 h-16 rounded-full bg-[#b7b9a4]"></motion.div>
+        <motion.div whileHover={{ scale: 1.1 }} className="w-16 h-16 rounded-full bg-[#d9cfc3]"></motion.div>
       </div>
+      <div className="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale justify-center">
+        <motion.div whileHover={{ scale: 1.1 }} className="w-16 h-16 rounded-full bg-[#f3efe4]"></motion.div>
+        <motion.div whileHover={{ scale: 1.1 }} className="w-16 h-16 rounded-full bg-[#c7b199]"></motion.div>
+        <motion.div whileHover={{ scale: 1.1 }} className="w-16 h-16 rounded-full bg-[#9f876f]"></motion.div>
+        <motion.div whileHover={{ scale: 1.1 }} className="w-16 h-16 rounded-full bg-[#8c6347]"></motion.div>
+      </div>
+
     </section>
   );
 }

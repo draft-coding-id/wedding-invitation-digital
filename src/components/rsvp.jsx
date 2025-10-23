@@ -5,6 +5,7 @@ import { supabase } from '../supabaseClient';
 // Terima guestName dari App.jsx untuk pre-fill form
 const Rsvp = ({ rsvps, addRsvp, guestName }) => {
   const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
   const [attendance, setAttendance] = useState('');
   const [guestCount, setGuestCount] = useState(1);
 
@@ -17,11 +18,12 @@ const Rsvp = ({ rsvps, addRsvp, guestName }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (name && attendance) {
+    if (name && phone && attendance) {
       const rsvpData = {
         name,
+        phone: '62' + phone,
         attendance,
-        guestcount: attendance === 'Hadir' ? guestCount : 0,
+        guestcount: attendance === 'Attending' ? guestCount : 0,
       };
       
       // Kirim data langsung ke Supabase
@@ -63,7 +65,7 @@ const Rsvp = ({ rsvps, addRsvp, guestName }) => {
         className="w-full max-w-lg bg-white/10 backdrop-blur-md p-6 rounded-lg border border-white/20"
       >
         <div className="mb-4">
-          <label htmlFor="name" className="block mb-2 text-white-gold">Nama Anda</label>
+          <label htmlFor="name" className="block mb-2 text-white-gold">Name</label>
           <input 
             type="text" 
             id="name" 
@@ -73,9 +75,27 @@ const Rsvp = ({ rsvps, addRsvp, guestName }) => {
             required
           />
         </div>
+
+        <div className="mb-4">
+          <label htmlFor="phone" className="block mb-2 text-white-gold">Phone Number</label>
+          <div className="flex">
+            <span className="inline-flex items-center px-3 text-white border border-r-0 border-white-gold rounded-l bg-white/10">
+              +62
+            </span>
+            <input 
+              type="text" 
+              id="phone" 
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className="w-full text-white border border-white-gold rounded-r py-2 px-3 focus:outline-none focus:ring-2 focus:ring-gold placeholder-gray-300"
+              placeholder=""
+              required
+            />
+          </div>
+        </div>
         
         <div className="mb-4">
-          <label htmlFor="attendance" className="block mb-2 text-white-gold">Konfirmasi Kehadiran</label>
+          <label htmlFor="attendance" className="block mb-2 text-white-gold">Attendance Confirmation</label>
           <select 
             id="attendance" 
             value={attendance}
@@ -86,20 +106,20 @@ const Rsvp = ({ rsvps, addRsvp, guestName }) => {
             }}
             required
           >
-            <option value="" disabled style={{ background: '#bfa06f', color: 'white' }}>Pilih Jawaban...</option>
-            <option value="Hadir" style={{ background: '#bfa06f', color: 'white' }}>Hadir</option>
-            <option value="Tidak Hadir" style={{ background: '#bfa06f', color: 'white' }}>Tidak Hadir</option>
+            <option value="" disabled style={{ background: '#bfa06f', color: 'white' }}>Select Answer...</option>
+            <option value="Attending" style={{ background: '#bfa06f', color: 'white' }}>Attending</option>
+            <option value="Not Attending" style={{ background: '#bfa06f', color: 'white' }}>Not Attending</option>
           </select>
         </div>
 
-        {/* Kolom jumlah tamu HANYA muncul jika memilih "Hadir" */}
-        {attendance === 'Hadir' && (
+        {/* Guest count field ONLY appears when selecting "Attending" */}
+        {attendance === 'Attending' && (
           <motion.div 
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             className="mb-4 overflow-hidden"
           >
-            <label htmlFor="guestCount" className="block mb-2 text-white-gold">Jumlah Tamu (termasuk Anda)</label>
+            <label htmlFor="guestCount" className="block mb-2 text-white-gold">Number of Guests (including yourself)</label>
             <select 
               id="guestCount" 
               value={guestCount}
@@ -109,14 +129,14 @@ const Rsvp = ({ rsvps, addRsvp, guestName }) => {
                 color: 'white'
               }}
             >
-              <option value={1} style={{ background: '#bfa06f', color: 'white' }}>1 Orang</option>
-              <option value={2} style={{ background: '#bfa06f', color: 'white' }}>2 Orang</option>
-              <option value={3} style={{ background: '#bfa06f', color: 'white' }}>3 Orang</option>
+              <option value={1} style={{ background: '#bfa06f', color: 'white' }}>1 Person</option>
+              <option value={2} style={{ background: '#bfa06f', color: 'white' }}>2 People</option>
+              <option value={3} style={{ background: '#bfa06f', color: 'white' }}>3 People</option>
             </select>
           </motion.div>
         )}
         <button type="submit" className="w-full bg-gold text-dark-green font-bold py-2 px-4 rounded-full hover:bg-opacity-80 transition-all">
-          Kirim Konfirmasi
+          Send Confirmation
         </button>
       </motion.form>
     </section>

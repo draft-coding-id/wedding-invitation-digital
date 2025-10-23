@@ -127,7 +127,7 @@ const Couple = () => {
                 transition={{ duration: 0.6, delay: 1 }}
                 className='text-lg mt-2'
               >
-                Putra dari Bpk. Gunawan Budi Santoso & Ibu Handayani Hutama
+                The son of Mr. Gunawan Budi Santoso & Mrs. Handayani Hutama
               </motion.p>
               <motion.a 
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -198,7 +198,7 @@ const Couple = () => {
                 transition={{ duration: 0.6, delay: 1 }}
                 className='text-lg mt-2'
               >
-                Putri dari Bpk. Sumedho & Ibu Viska Giana
+                The Daughter of Mr. Sumedho & Mrs. Viska Giana
               </motion.p>
               <motion.a 
                 initial={{ opacity: 0, scale: 0.8 }}

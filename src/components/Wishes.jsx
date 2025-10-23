@@ -38,10 +38,20 @@ const Wishes = ({ wishes, addWish, guestName }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="text-5xl  text-center text-white-gold mb-8"
+        className="text-5xl  text-center text-white-gold mb-4"
       >
-        Wishes & Prayers
+        Kind Words
       </motion.h2>
+
+      <motion.p 
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="text-center text-white-gold mb-12 max-w-2xl"
+      >
+        Please leave your sincere prayer and wishes to us and our families.
+      </motion.p>
 
       <motion.form
         onSubmit={handleSubmit}
@@ -52,7 +62,7 @@ const Wishes = ({ wishes, addWish, guestName }) => {
         className="w-full max-w-lg bg-white/10 backdrop-blur-md p-6 rounded-lg border border-white/20"
       >
         <div className="mb-4">
-          <label htmlFor="name" className="block mb-2 text-white-gold">Nama</label>
+          <label htmlFor="name" className="block mb-2 text-white-gold">Name</label>
           <input 
             type="text" 
             id="name" 

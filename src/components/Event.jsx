@@ -31,10 +31,10 @@ const Event = () => {
 
   const CountdownRenderer = ({ days, hours, minutes, seconds }) => (
     <div className="flex justify-center gap-4 text-center">
-      <div><span className="text-4xl font-bold">{days}</span><p>Hari</p></div>
-      <div><span className="text-4xl font-bold">{hours}</span><p>Jam</p></div>
-      <div><span className="text-4xl font-bold">{minutes}</span><p>Menit</p></div>
-      <div><span className="text-4xl font-bold">{seconds}</span><p>Detik</p></div>
+      <div><span className="text-4xl font-bold">{days}</span><p>D</p></div>
+      <div><span className="text-4xl font-bold">{hours}</span><p>H</p></div>
+      <div><span className="text-4xl font-bold">{minutes}</span><p>M</p></div>
+      <div><span className="text-4xl font-bold">{seconds}</span><p>S</p></div>
     </div>
   );
 
@@ -74,16 +74,16 @@ const Event = () => {
 
       <div className="flex flex-col md:flex-row gap-8 justify-center items-center w-full">
         <EventCard 
-          title="Pemberkatan"
-          date="Rabu, 10 Desember 2025"
+          title="Holy Matrimony"
+          date="Wed December 10th, 2025"
           time="09:00 - 11:00 WITA"
           venue="Green Nirvana Resort Maratua"
           address="Payung-Payung, Maratua, Payung-Payung, Maratua, Berau Regency, East Kalimantan 77381"
           mapLink="https://maps.app.goo.gl/Z6Z6jUoDDkVHtHcm8"
         />
         <EventCard 
-          title="Resepsi"
-          date="Rabu, 10 Desember 2025"
+          title="Reception"
+          date="Wed December 10th, 2025"
           time="17:00 - 21:00 WITA"
           venue="Green Nirvana Resort Maratua"
           address="Payung-Payung, Maratua, Payung-Payung, Maratua, Berau Regency, East Kalimantan 77381"

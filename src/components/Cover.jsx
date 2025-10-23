@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MdMail } from 'react-icons/md';
 import CoverImage from '../assets/cover.jpg';
-import CoverCornerBottomLeft from '../assets/bottom-left.png';
-import CoverCornerBottomRight from '../assets/bottom-right.png';
-import CoverCornerTopRight from '../assets/top-right.png';
+// import CoverCornerBottomLeft from '../assets/bottom-left.png';
+// import CoverCornerBottomRight from '../assets/bottom-right.png';
+// import CoverCornerTopRight from '../assets/top-right.png';
 
 const Cover = ({ isOpen, guestName, onOpen }) => {
   return (
@@ -63,7 +63,7 @@ const Cover = ({ isOpen, guestName, onOpen }) => {
           transition={{ duration: 1, delay: 1.4 }}
           className="text-xl font-bold mb-1"
         >
-          Rabu, 10 Desember 2025
+          December 10th, 2025
         </motion.p>
         <motion.p
           initial={{ opacity: 0 }}

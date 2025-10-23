@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 
 // Import semua gambar yang perlu di-preload
 import background from '../assets/background.jpg';
-import bottomLeft from '../assets/bottom-left.png';
-import bottomRight from '../assets/bottom-right.png';
+// import bottomLeft from '../assets/bottom-left.png';
+// import bottomRight from '../assets/bottom-right.png';
 import bride from '../assets/bride.jpg';
 import cover2 from '../assets/cover-2.jpg';
 import cover from '../assets/cover.jpg';
 import groom from '../assets/groom.jpg';
 import qrCode from '../assets/qr-code.png';
-import topRight from '../assets/top-right.png';
+// import topRight from '../assets/top-right.png';
 import galleryImage1a from '../assets/gallery/1a.jpg';
 import galleryImage1b from '../assets/gallery/1b.jpg';
 import galleryImage2a from '../assets/gallery/2a.jpg';
@@ -22,14 +22,14 @@ import galleryImage4b from '../assets/gallery/4b.jpg';
 // Daftar semua asset yang perlu di-preload
 const imagesToPreload = [
   background,
-  bottomLeft,
-  bottomRight,
+  // bottomLeft,
+  // bottomRight,
   bride,
   cover2,
   cover,
   groom,
   qrCode,
-  topRight,
+  // topRight,
   // Tambahkan URL eksternal untuk gallery
   galleryImage1a,
   galleryImage1b,

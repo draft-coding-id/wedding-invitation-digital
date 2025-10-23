@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Dashboard = ({ rsvps, wishes, onLogout }) => {
+  console.log(rsvps);
   // 1. State untuk melacak tab yang sedang aktif
   const [activeTab, setActiveTab] = useState('kehadiran'); // Default ke 'kehadiran'
 
   // Logika untuk data kehadiran (dipindahkan dari atas)
-  const attendingGuests = rsvps.filter(rsvp => rsvp.attendance === 'Hadir');
-  const notAttendingGuests = rsvps.filter(rsvp => rsvp.attendance === 'Tidak Hadir');
+  const attendingGuests = rsvps.filter(rsvp => rsvp.attendance === 'Attending');
+  const notAttendingGuests = rsvps.filter(rsvp => rsvp.attendance === 'Not Attending');
   const totalAttending = attendingGuests.reduce((sum, rsvp) => sum + rsvp.guestcount, 0);
 
   // Konten untuk setiap tab
@@ -28,8 +29,9 @@ const Dashboard = ({ rsvps, wishes, onLogout }) => {
             <thead>
               <tr className="border-b border-gold/50">
                 <th className="p-2">No.</th>
-                <th className="p-2">Nama</th>
-                <th className="p-2">Jumlah Tamu</th>
+                <th className="p-2">Name</th>
+                <th className="p-2">Phone</th>
+                <th className="p-2">Guest Count</th>
               </tr>
             </thead>
             <tbody>
@@ -37,6 +39,7 @@ const Dashboard = ({ rsvps, wishes, onLogout }) => {
                 <tr key={index} className="border-b border-white/10">
                   <td className="p-2">{index + 1}</td>
                   <td className="p-2">{rsvp.name}</td>
+                  <td className="p-2">{rsvp.phone}</td>
                   <td className="p-2">{rsvp.guestcount}</td>
                 </tr>
               ))}
@@ -58,7 +61,8 @@ const Dashboard = ({ rsvps, wishes, onLogout }) => {
             <thead>
               <tr className="border-b border-gold/50">
                 <th className="p-2">No.</th>
-                <th className="p-2">Nama</th>
+                <th className="p-2">Name</th>
+                <th className="p-2">Phone</th>
               </tr>
             </thead>
             <tbody>
@@ -66,6 +70,7 @@ const Dashboard = ({ rsvps, wishes, onLogout }) => {
                 <tr key={index} className="border-b border-white/10">
                   <td className="p-2">{index + 1}</td>
                   <td className="p-2">{rsvp.name}</td>
+                  <td className="p-2">{rsvp.phone}</td>
                 </tr>
               ))}
             </tbody>
