@@ -8,6 +8,7 @@ import galleryImage3a from '../assets/gallery/3a.jpg';
 import galleryImage3b from '../assets/gallery/3b.jpg';
 import galleryImage4a from '../assets/gallery/4a.jpg';
 import galleryImage4b from '../assets/gallery/4b.jpg';
+import movie from '../assets/movie.mp4';
 
 const photos = [
   galleryImage1a,
@@ -73,6 +74,21 @@ const Gallery = () => {
           </motion.div>
         ))}
       </div>
+
+      <motion.h2 
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="text-5xl  text-center text-white-gold mb-12 mt-20"
+      >
+        Our Video
+      </motion.h2>
+
+      <video controls className="w-full max-w-6xl mx-auto my-12 rounded-lg shadow-lg">
+        <source src={movie} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       {/* Modal Popup */}
       <AnimatePresence>

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const stories = [
 	{
 		title: 'Reception',
-		desc: 'Join us for enchanting evening celebration! Our wedding ceremony will begin at 4pm in the evening, followed by a reception under the stars.',
+		desc: 'Join us for enchanting evening celebration! Our wedding ceremony will begin at 5pm in the evening, followed by a reception under the stars.',
 	},
 	{
 		title: 'Accomodation',
