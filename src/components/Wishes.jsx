@@ -88,23 +88,25 @@ const Wishes = ({ wishes, addWish, guestName }) => {
         </button>
       </motion.form>
 
-      <div className="w-full max-w-lg mt-12 max-h-96 overflow-y-auto">
+      <div className="w-full max-w-lg mt-12">
         <h3 className="text-3xl  text-center text-gold mb-6">Messages</h3>
-        <AnimatePresence>
-          {wishes.map((wish, index) => (
-            <motion.div
-              key={index}
-              layout
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              className="bg-white/10 backdrop-blur-sm p-4 rounded-lg mb-4 border border-white/20"
-            >
-              <p className="font-bold text-white">{wish.name}</p>
-              <p className="text-light-cream/90 text-white-gold">{wish.message}</p>
-            </motion.div>
-          ))}
-        </AnimatePresence>
+        <div className='max-h-96 overflow-y-auto'>
+          <AnimatePresence>
+            {wishes.map((wish, index) => (
+              <motion.div
+                key={index}
+                layout
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                className="bg-white/10 backdrop-blur-sm p-4 rounded-lg mb-4 border border-white/20"
+              >
+                <p className="font-bold text-white">{wish.name}</p>
+                <p className="text-light-cream/90 text-white-gold">{wish.message}</p>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   );
