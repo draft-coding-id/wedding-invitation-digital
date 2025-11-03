@@ -85,7 +85,14 @@ const Gallery = () => {
         Our Video
       </motion.h2>
 
-      <video controls className="w-full max-w-6xl mx-auto my-12 rounded-lg shadow-lg">
+      <video 
+        controls 
+        autoPlay 
+        muted 
+        loop 
+        playsInline
+        className="w-full max-w-6xl mx-auto my-12 rounded-lg shadow-lg"
+      >
         <source src={movie} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
